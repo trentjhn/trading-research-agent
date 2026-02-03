@@ -1,0 +1,42 @@
+[project]
+name = "trading-research-agent"
+version = "0.1.0"
+description = "AI-powered trading research agent"
+requires-python = ">=3.9"
+
+dependencies = [
+    # Core AI
+    "anthropic>=0.21.3",
+    "langgraph>=0.0.30",
+
+    # Data & APIs
+    "yfinance>=0.2.37",
+    "pandas>=2.2.0",
+    "numpy>=1.26.0",
+    "requests>=2.31.0",
+
+    # Technical Analysis (using manual calculations with pandas/numpy)
+
+    # Sentiment (optional - can be added later)
+    # "transformers>=4.38.2",
+    # "torch>=2.2.1",
+
+    # Storage
+    "redis>=5.0.3",
+    "qdrant-client>=1.7.3",
+
+    # Utilities
+    "python-dotenv>=1.0.1",
+    "rich>=13.7.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "ruff>=0.3.0",
+]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
